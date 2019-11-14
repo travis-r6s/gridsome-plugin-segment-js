@@ -2,7 +2,22 @@
   "name": "gridsome-plugin-segment-js",
   "version": "1.0.0",
   "description": "Segment plugin for Gridsome",
-  "main": "index.js",
+  "main": "gridsome.client.js",
   "author": "Travis Reynolds",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "analytics-node": "^3.4.0-beta.1",
+    "nanoid": "^2.1.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.2.2",
+    "eslint-config-standard": "^14.0.1",
+    "eslint-config-travisreynolds-node": "1.1.2",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
 }
