@@ -5,6 +5,7 @@
   "main": "gridsome.client.js",
   "author": "Travis Reynolds",
   "license": "MIT",
+  "repository": "https://github.com/thetre97/gridsome-plugin-segment-js",
   "dependencies": {
     "vue-segment-analytics": "^0.3.1"
   }
