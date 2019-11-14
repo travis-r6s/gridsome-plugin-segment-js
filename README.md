@@ -27,7 +27,7 @@ You can also use `this.$segment` methods, for example `this.$segment.identify('u
 
 ## Configuration
 
-By default `VueSegmentAnalytics` hooks into Vue router to automatically track pages, but you can disable this, by setting the `trackPage` option to false.
+By default `VueSegmentAnalytics` hooks into Vue router to automatically track pages, but you can disable this by setting the `trackPage` option to false.
 
 ```js
 ...
