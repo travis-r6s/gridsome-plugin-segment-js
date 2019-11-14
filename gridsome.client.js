@@ -11,7 +11,7 @@ export default ( Vue, options, { isClient, router } ) => {
 
     // use prod write key when in prod env, else use dev write key
     // note below, snippet wont render unless writeKey is truthy
-    const writeKey = process.env.NODE_ENV === 'production' ? prodKey : devKey
+    const writeKey = process.env.NODE_ENV === 'production' || !devKey ? prodKey : devKey
 
     Vue.use(VueSegmentAnalytics, {
       id: writeKey,
