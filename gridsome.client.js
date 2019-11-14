@@ -15,7 +15,7 @@ export default ( Vue, options, { isClient, router } ) => {
 
     Vue.use(VueSegmentAnalytics, {
       id: writeKey,
-      router: trackPage && router
+      router: trackPage ? router : undefined
     })
   }
 }
