@@ -1,0 +1,8 @@
+{
+  "name": "gridsome-plugin-segment-js",
+  "version": "1.0.0",
+  "description": "Segment plugin for Gridsome",
+  "main": "index.js",
+  "author": "Travis Reynolds",
+  "license": "MIT"
+}
