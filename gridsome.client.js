@@ -1,6 +1,3 @@
-import Analytics from 'analytics-node'
-import nanoid from 'nanoid'
-
 export default (Vue, options, { isClient, router }) => {
   const { trackPage, prodKey, devKey } = options
 
