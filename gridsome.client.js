@@ -1,7 +1,8 @@
-export default (Vue, options, { isClient, router }) => {
+import VueSegmentAnalytics from 'vue-segment-analytics'
+export default ( Vue, options, { isClient, router } ) => {
   const { trackPage, prodKey, devKey } = options
 
-  if (isServer) {
+  if (isClient) {
     // ensures Segment write key is present
     if (!prodKey || prodKey.length < 10) { console.error('segment prodKey must be at least 10 char in length') }
 
