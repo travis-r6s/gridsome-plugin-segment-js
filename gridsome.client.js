@@ -1,10 +1,10 @@
 import Analytics from 'analytics-node'
 import nanoid from 'nanoid'
 
-export default (Vue, options, { head, isServer, router }) => {
+export default (Vue, options, { isClient, router }) => {
   const { trackPage, prodKey, devKey } = options
 
-  if (!isServer) {
+  if (isServer) {
     // ensures Segment write key is present
     if (!prodKey || prodKey.length < 10) { console.error('segment prodKey must be at least 10 char in length') }
 
@@ -15,22 +15,10 @@ export default (Vue, options, { head, isServer, router }) => {
     // note below, snippet wont render unless writeKey is truthy
     const writeKey = process.env.NODE_ENV === 'production' ? prodKey : devKey
 
-    const analytics = new Analytics(writeKey)
-
-    Vue.prototype.$analytics = analytics
-
-    if (trackPage) {
-      router.afterEach((to, from) => {
-        analytics.page({
-          anonymousId: nanoid(10),
-          name: to.path || '',
-          properties: {
-            path: to.fullPath,
-            referrer: from.fullPath
-          }
-        })
-      })
-    }
+    Vue.use(VueSegmentAnalytics, {
+      id: writeKey,
+      router: trackPage && router
+    })
   }
 }
 
