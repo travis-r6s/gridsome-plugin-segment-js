@@ -7,9 +7,9 @@ load-script@~1.0.0:
   resolved "https://registry.yarnpkg.com/load-script/-/load-script-1.0.0.tgz#0491939e0bee5643ee494a7e3da3d2bac70c6ca4"
   integrity sha1-BJGTngvuVkPuSUp+PaPSuscMbKQ=
 
-vue-segment-analytics@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/vue-segment-analytics/-/vue-segment-analytics-0.3.1.tgz#98587b60be0870e4e1aa295a2c2c73e5098c7982"
-  integrity sha512-Uk7t6tiIAb828L1sEIMegL2IVVnPc2b301QVOnIVRQ+VuuNQ/AYEqeHDBsbtysPlMCdsr7onpChPxUEQ1JnkBA==
+vue-segment-analytics@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/vue-segment-analytics/-/vue-segment-analytics-0.4.0.tgz#b1463e31e7a481ab59f61238cf9987a9f7b6c899"
+  integrity sha512-F8wo4+iYSqXdh2dF93LaM6V2ULKfn0rsaZCIfJetu9b1osYZSAM8bfsHhcWRJGIeUJtvSYBk7xYTYb8Uak19lQ==
   dependencies:
     load-script "~1.0.0"

@@ -13,6 +13,6 @@
     "segmentjs"
   ],
   "dependencies": {
-    "vue-segment-analytics": "^0.3.1"
+    "vue-segment-analytics": "^0.4.0"
   }
 }
