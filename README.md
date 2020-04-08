@@ -15,8 +15,8 @@ module.exports = {
     {
       use: 'gridsome-plugin-segment-js',
       options: {
-        prodKey: <segment-prod-key>,
-        devKey: <segment-dev-key>,
+        prodKey: '<segment-prod-key>',
+        devKey: '<segment-dev-key>',
         trackPage: true # Defaults to false - will automatically send page views,
         pageCategory: 'some-category' # Optional category value
       }
