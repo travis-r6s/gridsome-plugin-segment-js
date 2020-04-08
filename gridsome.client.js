@@ -1,6 +1,6 @@
 import VueSegmentAnalytics from 'vue-segment-analytics'
-export default ( Vue, options, { isClient, router } ) => {
-  const { trackPage, prodKey, devKey } = options
+export default (Vue, options, { isClient, router }) => {
+  const { trackPage = false, pageCategory, prodKey, devKey } = options
 
   if (isClient) {
     // ensures Segment write key is present
@@ -13,10 +13,16 @@ export default ( Vue, options, { isClient, router } ) => {
     // note below, snippet wont render unless writeKey is truthy
     const writeKey = process.env.NODE_ENV === 'production' || !devKey ? prodKey : devKey
 
-    Vue.use(VueSegmentAnalytics, {
-      id: writeKey,
-      router: trackPage ? router : undefined
-    })
+    Vue.use(VueSegmentAnalytics, { id: writeKey })
+    
+    if (trackPage) {
+      router.afterEach((to, from) => {
+        setTimeout(() => this.$segment.page(pageCategory, to.name || '', {
+          path: to.fullPath,
+          referrer: from.fullPath
+        }), 1500)
+      })
+    }
   }
 }
 
