@@ -17,8 +17,8 @@ module.exports = {
       options: {
         prodKey: '<segment-prod-key>',
         devKey: '<segment-dev-key>',
-        trackPage: true # Defaults to false - will automatically send page views,
-        pageCategory: 'some-category' # Optional category value
+        trackPage: true // Defaults to false - will automatically send page views,
+        pageCategory: 'some-category' // Optional category value
       }
     }
   ]
