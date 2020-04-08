@@ -17,7 +17,7 @@ export default (Vue, options, { isClient, router }) => {
     
     if (trackPage) {
       router.afterEach((to, from) => {
-        setTimeout(() => this.$segment.page(pageCategory, to.name || '', {
+        setTimeout(() => Vue.$segment.page(pageCategory, to.name || '', {
           path: to.fullPath,
           referrer: from.fullPath
         }), 1500)
